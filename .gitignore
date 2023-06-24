@@ -206,7 +206,7 @@ jspm_packages
 jspm_packages/
 lerna-debug.log*
 lib-cov
-lib/
+# lib/
 lib64/
 local_settings.py
 logs
