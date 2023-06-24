@@ -17,7 +17,6 @@ _UpgradeReport_Files/
 .axoCover/*
 .builds
 .cache
-.cache
 .cache/
 .cr/personal
 .docusaurus
@@ -42,7 +41,6 @@ _UpgradeReport_Files/
 .npm
 .ntvs_analysis.dat
 .nuxt
-.nyc_output
 .nyc_output
 .paket/paket.exe
 .parcel-cache
@@ -98,7 +96,6 @@ _UpgradeReport_Files/
 *.appxbundle
 *.appxupload
 *.aps
-*.aps
 *.azurePubxml
 *.bim_*.settings
 *.bim.layout
@@ -106,7 +103,6 @@ _UpgradeReport_Files/
 *.btm.cs
 *.btp.cs
 *.build.csdef
-*.cab
 *.cab
 *.cachefile
 *.code-workspace
@@ -130,20 +126,13 @@ _UpgradeReport_Files/
 *.ldf
 *.lnk
 *.log
-*.log
-*.log
 *.mdf
 *.meta
 *.mm.*
 *.msi
-*.msi
-*.msix
 *.msix
 *.msm
-*.msm
 *.msp
-*.msp
-*.ncb
 *.ncb
 *.ndf
 *.nuget.props
@@ -230,7 +219,6 @@ build/Release
 BundleArtifacts/
 ClientBin/
 coverage
-coverage
 coverage*.info
 coverage*.json
 coverage*.xml
@@ -263,7 +251,6 @@ MigrationBackup/
 mono_crash.*
 nCrunchTemp_*
 node_modules
-node_modules/
 node_modules/
 npm-debug.log*
 nunit-*.xml
