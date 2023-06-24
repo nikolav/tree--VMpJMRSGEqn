@@ -1,5 +1,7 @@
 // import { asyncABC } from './lib/async';
+import { A } from './lib';
 
 (async () => {
-  console.log({ res: await Promise.resolve({ status: 'ok' }) });
+  const a = new A();
+  console.log({ a, res: await Promise.resolve({ status: 'ok' }) });
 })();
