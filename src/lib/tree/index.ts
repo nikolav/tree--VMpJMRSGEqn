@@ -1,3 +1,4 @@
+// #0
 type TPrimitive = string | number | symbol;
 type OrNull<T> = T | null;
 type OrNoValue<T> = OrNull<T | undefined>;
@@ -29,13 +30,14 @@ interface INodeValueCalculated<TNodeValue = any> {
   (val: TNodeValue): TNodeValue;
 }
 
-// #!
+// #1
 const fn_ = Function.prototype;
 const has_ = fn_.call.bind(Object.prototype.hasOwnProperty);
+// #2
 let ID = 1;
 const idGen = () => ID++;
 
-// #
+// #3
 const nodeInitDefaults_: TNodeInitDefaults = {
   id: null,
   root: null,
@@ -115,6 +117,8 @@ class node<TNodeValue = any> {
 // @tree
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 class tree<TNodeValue = any> extends node<TNodeValue> {
+  static Node = node;
+  // @init
   constructor(value = null) {
     super({ value });
     cc(this).root = this;
@@ -123,7 +127,7 @@ class tree<TNodeValue = any> extends node<TNodeValue> {
     idcache_[this.__] = {};
   }
 
-  // #node
+  // @node
   node = (config: TNodeInitConfig<TNodeValue> = { id: null, value: null }) => {
     return new node<TNodeValue>({ ...config, root: this });
   };

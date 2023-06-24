@@ -4,5 +4,6 @@ import tree from '.';
 
 test('tree', (t) => {
   const a = new tree();
-  t.is(a instanceof tree, true);
+  const n1 = a.node();
+  t.is(a instanceof tree && n1 instanceof tree.Node, true);
 });
