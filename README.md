@@ -1,3 +1,4 @@
 # ts-starter--blank
 
-blank ts starter
+--template
+https://github.com/bitjson/typescript-starter.git
