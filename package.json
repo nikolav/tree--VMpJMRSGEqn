@@ -1,11 +1,11 @@
 {
-  "name": "ts-starter--blank",
+  "name": "nikolav--treets",
   "version": "0.0.2",
   "description": "blank ts starter",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/YOUR_GITHUB_USER_NAME/ts-starter--blank",
+  "repository": "https://github.com/nikolav/tree--VMpJMRSGEqn.git",
   "license": "MIT",
   "keywords": [],
   "scripts": {
