@@ -16,9 +16,12 @@
   ],
   "globals": { "BigInt": true, "console": true, "WebAssembly": true },
   "rules": {
+    "functional/immutable-data": "off",
     "functional/no-class": "off",
+    "functional/prefer-type-literal": "off",
     "functional/prefer-readonly-type": "off",
     "functional/no-this-expression": "off",
+    "functional/no-let": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "eslint-comments/disable-enable-pair": [
       "error",
