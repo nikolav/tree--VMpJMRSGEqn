@@ -1,7 +1,14 @@
+import {
+  ICallback,
+  IJSONNode,
+  INodeClassesCalculated,
+  INodeValueCalculated,
+  OrNoValue,
+  OrNull,
+  TNodeClasses,
+  TPrimitive,
+} from '../../types';
 // #0
-type TPrimitive = string | number | symbol;
-type OrNull<T> = T | null;
-type OrNoValue<T> = OrNull<T | undefined>;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface ICache<T = any> {
   [key: number]: ICacheEntry<T>;
@@ -15,7 +22,6 @@ interface ICacheEntry<TNodeValue = any> {
   id: OrNoValue<TPrimitive>;
   classes: Record<TPrimitive, OrNoValue<boolean>>;
 }
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface TNodeInitDefaults<TNodeValue = any> {
   id: OrNull<TPrimitive>;
@@ -25,24 +31,6 @@ interface TNodeInitDefaults<TNodeValue = any> {
 type TNodeIdCache = Record<number, Record<TPrimitive, node>>;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type TNodeInitConfig<TNodeValue = any> = Partial<TNodeInitDefaults<TNodeValue>>;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-interface INodeValueCalculated<TNodeValue = any> {
-  (val: TNodeValue): TNodeValue;
-}
-type TNodeClasses = Record<string, OrNoValue<boolean>>;
-interface INodeClassesCalculated {
-  (c: TNodeClasses): TNodeClasses;
-}
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-interface ICallback<TArgs = any, TRes = any> {
-  (...args: TArgs[]): TRes;
-}
-// eslint-disable-next-line functional/no-mixed-type
-interface IJSONNode {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: TPrimitive]: any;
-  children?: IJSONNode[];
-}
 interface ITraverseTreeCallback {
   (node: IJSONNode, index: number, coll: node[]): void;
 }
