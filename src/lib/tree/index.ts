@@ -423,7 +423,7 @@ class node<TNodeValue = any> {
 
 // @tree
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-class tree<TNodeValue = any> extends node<TNodeValue> {
+export default class tree<TNodeValue = any> extends node<TNodeValue> {
   static Node = node;
   // @init
   constructor(value = null) {
@@ -459,8 +459,6 @@ class tree<TNodeValue = any> extends node<TNodeValue> {
     return new node<TNodeValue>({ ...config, root: this });
   };
 }
-
-export default tree;
 
 // @helpers
 function cc(node$: node) {
