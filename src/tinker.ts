@@ -1,4 +1,3 @@
-// import { asyncABC } from './lib/async';
 import { tree } from './lib';
 
 (async () => {
