@@ -139,7 +139,6 @@ class node<TNodeValue = any> {
     return getid_(this);
   };
 
-  //
   // @classes
   //  .classes
   //  .hasClass
@@ -176,12 +175,20 @@ class node<TNodeValue = any> {
   byClass = (cls: string, collect: node[] = []) => {
     return this.query(byClass_, collect, { cls });
   };
-  //
-  //
+  // /@classes
 
   // @contains
   contains = (node$: node) => {
     while ((node$ = node$.parent())) if (this === node$) return true;
+    return false;
+  };
+
+  // @contained
+  contained = (pt$: node) => {
+    let node$: node = this;
+    while ((node$ = node$.parent())) {
+      if (pt$ === node$) return true;
+    }
     return false;
   };
 

@@ -2,6 +2,15 @@ import { tree } from './lib';
 
 (async () => {
   const t1 = new tree();
+  const n1 = t1.node();
+  const n2 = t1.node();
+  const n21 = t1.node();
+  const n211 = t1.node();
+  n21.append(n211);
+  n2.append(n21);
+  t1.append(n1);
+  t1.append(n2);
+  console.log({ res: t1.len() });
   // const t1n1 = t1.node();
   // const t1n2 = t1.node();
   // const t1n1c1 = t1.node();
@@ -17,17 +26,17 @@ import { tree } from './lib';
   // t1.append(t1n2);
   // t1n1.append(t1n1c1);
   // t1n1.append(t1n1c2);
-  t1.json({
-    root: '#0',
-    children: [{ a: 1 }, { a: 2, children: [{ a: 21 }, { a: 22 }] }],
-  });
-  console.log({
-    't1:ls': t1
-      .first()
-      .last()
-      .ls()
-      .map((node$) => node$.value()),
-  });
+  // t1.json({
+  //   root: '#0',
+  //   children: [{ a: 1 }, { a: 2, children: [{ a: 21 }, { a: 22 }] }],
+  // });
+  // console.log({
+  //   't1:ls': t1
+  //     .first()
+  //     .last()
+  //     .ls()
+  //     .map((node$) => node$.value()),
+  // });
   // t1.value((v: string) => `${v}@${Date.now()}`);
   // // const t1n1 = t1.node({ value: 't1n1 --1' });
   // console.log({
