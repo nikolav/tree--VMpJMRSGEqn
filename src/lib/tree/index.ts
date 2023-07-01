@@ -229,7 +229,7 @@ class node<TNodeValue = any> {
   // @head
   head = () => {
     const pt$ = this.parent();
-    return null == pt$ ? this : pt$.eq(0);
+    return pt$ ? pt$.eq(0) : this;
   };
 
   // @i
@@ -240,9 +240,10 @@ class node<TNodeValue = any> {
 
   // @isHead
   isHead = () => {
-    const pt$ = this.parent();
-    return null == pt$ ? false : this === this.head();
+    return this === this.head();
   };
+
+  // @isTail
   isTail = () => {
     return this === this.tail();
   };
@@ -376,7 +377,7 @@ class node<TNodeValue = any> {
   // @tail
   tail = () => {
     const pt$ = this.parent();
-    return null == pt$ ? this : pt$.eq(-1);
+    return pt$ ? pt$.eq(-1) : this;
   };
 
   // @toString
