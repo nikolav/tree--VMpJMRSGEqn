@@ -399,7 +399,7 @@ class node<TNodeValue = any> {
       return cc(this).value;
     }
     cc(this).value =
-      'function' != typeof val
+      'function' !== typeof val
         ? val
         : (<INodeValueCalculated<TNodeValue>>val)(cc(this).value);
     //
